@@ -3,7 +3,7 @@
     "publisher": "huykon225",
     "displayName": "PWA Studio Scaffold Snippets",
     "description": "Magento PWA Studio snippets by Mason Tran",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.72.0"
     },
@@ -24,6 +24,10 @@
             }
         ]
     },
+    "galleryBanner": {
+        "color": "#C80000",
+        "theme": "dark"
+    },
     "scripts": {
         "lint": "eslint .",
         "pretest": "npm run lint",
@@ -43,5 +47,10 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/huykon/vscode-pwa-scaffold.git"
-    }
+    },
+    "bugs": {
+        "url": "https://github.com/huykon/vscode-pwa-scaffold/issues",
+        "email": "huykon225@gmail.com"
+    },
+    "homepage": "https://github.com/huykon/vscode-pwa-scaffold/blob/master/README.md"
 }

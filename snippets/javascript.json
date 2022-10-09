@@ -15,7 +15,7 @@
             "}",
             "",
             "${2:Name}.propTypes = {",
-            "    classes: shape({root: string})",
+            "    classes: shape({ root: string })",
             "};",
             "${2:Name}.defaultProps = {};",
             "export default ${2:Name};"
@@ -71,14 +71,14 @@
         "description": "PWA Studio Route",
         "body": [
             "targets.of('@magento/venia-ui').routes.tap(",
-            "  routesArray => {",
-            "     routesArray.push({",
+            "  routes => {",
+            "     routes.push({",
             "         name: '${1:Name}',",
             "         pattern: '${2:/route}',",
             "         path: '${3:@partner/route}'",
             "     });",
             "",
-            "     return routesArray;",
+            "     return routes;",
             "  });"
         ]
     },
@@ -86,7 +86,7 @@
         "prefix": "pst-route-sub",
         "description": "PWA Studio Sub Route",
         "body": [
-            "routesArray.push({",
+            "routes.push({",
             "     name: '${1:Name}',",
             "     pattern: '${2:/route}',",
             "     path: '${3:@partner/route}'",
@@ -105,7 +105,7 @@
     },
     "PWA Studio hooks target sub": {
         "prefix": "pst-hook-sub",
-        "description": "PWA Studio peregrine hook Target",
+        "description": "PWA Studio peregrine hook Target sub",
         "body": [
             "    hooks.${1:useHook}.wrapWith('${2:$@my-extensions/log-wrapper}');"
         ]
@@ -119,6 +119,38 @@
             "        componentName: '${2:Name}',",
             "        importPath: '@adobe/xm-components/xm-renderer'",
             "    })",
+            ");"
+        ]
+    },
+    "PWA Studio Special Features Target": {
+        "prefix": "pst-target-special",
+        "description": "PWA Studio target to special features",
+        "body": [
+            "targets.of('@magento/pwa-buildpack').specialFeatures.tap(",
+            "    flags[targets.name] = {",
+            "        cssModules: '${2:true}',",
+            "        esModules: '${3:true}',",
+            "        graphqlQueries: '${4:true}',",
+            "        rootComponents: '${5:true}',",
+            "    }",
+            ");"
+        ]
+    },
+    "PWA Studio Targetable": {
+        "prefix": "pst-targetable-comp",
+        "description": "PWA Studio targetable to component",
+        "body": [
+            "const ${1:Component} = targetables.${3:reactComponent}('${2:@magento/venia-ui/lib/components/Main/main.js}');"
+        ]
+    },
+    "PWA Studio Targetable adjustment component": {
+        "prefix": "pst-targetable-adj",
+        "description": "PWA Studio targetable to component & adjust component content",
+        "body": [
+            "${1:component}.${2:insertAfterSource}(",
+            "    '${3:import defaultClasses from }',",
+            "    '${4:\"src/index.module.css\"}'",
+            "    ${5:,option}",
             ");"
         ]
     }
