@@ -18,7 +18,7 @@ Launch _Quick Open_:
 Paste the following command and press `Enter`:
 
 ```shell
-ext install larsroettig.vscode-pwa-studio
+ext install huykon225.vscode-pwa-scaffold
 ```
 
 ### GitHub Repository Clone
@@ -31,7 +31,7 @@ Depending on your platform it is located in the following folders:
 -   _Windows_: `%USERPROFILE%\.vscode\extensions`
 
 ```shell
-git clone git@github.com:larsroettig/vscode-pwa-studio.git
+git clone git@github.com:huykon/vscode-pwa-scaffold.git
 ```
 
 For development you open the cloned directory and press `F5` then VS-Code open new Window with the loaded extension.

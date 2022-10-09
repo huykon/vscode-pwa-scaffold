@@ -3,22 +3,24 @@
     "publisher": "huykon225",
     "displayName": "PWA Studio Scaffold Snippets",
     "description": "Magento PWA Studio snippets by Mason Tran",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.72.0"
     },
+    "keywords": [
+        "Magento 2",
+        "PWA Studio",
+        "PWA Studio Scaffold",
+        "PWA Studio Snippets"
+    ],
     "categories": [
-        "Other"
+        "Snippets"
     ],
-    "activationEvents": [
-        "onCommand:vscode-pwa-scaffold.helloWorld"
-    ],
-    "main": "./extension.js",
     "contributes": {
-        "commands": [
+        "snippets": [
             {
-                "command": "vscode-pwa-scaffold.helloWorld",
-                "title": "Hello World"
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
             }
         ]
     },
